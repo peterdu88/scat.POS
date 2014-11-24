@@ -1,2 +1,5 @@
 config.php
 /vendor/
+.buildpath
+.settings/
+.project
