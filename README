@@ -1,0 +1,42 @@
+Scat is a web-based Point-of-Sale (POS) system.
+
+Scat uses the jQuery and jQueryUI Javascript libraries.
+  http://jquery.com/
+
+Scat uses the Bootstrap front-end framework:
+  http://getbootstrap.com/
+
+Scat uses Font Awesome, the iconic font designed for Bootstrap:
+  http://fontawesome.io/
+
+Scat includes the Tablesorter 2.0 plugin for jQuery:
+  http://tablesorter.com/docs/
+
+Scat includes bootstrap-datepicker.js:
+  https://github.com/eternicode/bootstrap-datepicker/
+
+Scat includes the SimpleModal plugin for jQuery:
+  http://www.ericmmartin.com/projects/simplemodal/
+
+Scat includes Datejs, an open-source JavaScript Date library:
+  http://www.datejs.com/
+
+Scat includes the jQuery Hotkeys plugin:
+  http://github.com/tzuryby/jquery.hotkeys
+
+Scat includes the Jeditable jQuery plugin:
+  http://www.appelsiini.net/projects/jeditable
+
+Scat includes Keypress:
+  http://dmauro.github.io/Keypress/
+
+Scat includes FPDF for PDF generation:
+  http://www.fpdf.org/
+
+Scat inclues BarCode Coder Library for barcode generation:
+  http://barcode-coder.com/
+
+Scat includes the Knockout JavaScript MVVM library:
+  http://knockoutjs.com/
+
+See the LICENSE file for licensing information.
