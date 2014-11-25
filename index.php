@@ -1,4 +1,4 @@
-<?
+<?php 
 require 'scat.php';
 require 'lib/txn.php';
 
@@ -573,7 +573,7 @@ $(function() {
 
   $("#sidebar a[id='unpaid']").click();
 
-<?
+<?php 
   $id= (int)$_REQUEST['id'];
   $number= (int)$_REQUEST['number'];
   if ($number) {
@@ -757,11 +757,11 @@ $("#return").on("click", function() {
     </div>
     <div class="panel-body">
  <button class="btn btn-primary btn-lg" data-value="cash">Cash</button>
-<?if ($DEBUG) {?>
+<?php if ($DEBUG) {?>
  <button id="credit-refund" class="btn btn-default btn-lg optional" data-value="credit-refund">Refund Credit Card</button>
  <button id="credit-stored" class="btn btn-default btn-lg optional" data-value="credit-stored">Stored Credit Card</button>
  <button class="btn btn-default btn-lg" data-value="credit">Credit Card</button>
-<?}?>
+<?php }?>
  <button class="btn btn-default btn-lg" data-value="credit-manual">Credit Card (Manual)</button>
  <br><br>
  <button class="btn btn-default" data-value="gift">Gift Card</button>
@@ -970,7 +970,7 @@ $("#pay-gift").on("click", "button[name='lookup']", function (ev) {
   if (card == '...') {
     card= "11111111111"; // Test card.
   }
-  $.getJSON("<?=GIFT_BACKEND?>/check-balance.php?callback=?",
+  $.getJSON("<?php echo GIFT_BACKEND;?>/check-balance.php?callback=?",
             { card: card },
             function (data) {
               if (data.error) {
@@ -1008,7 +1008,7 @@ $("#pay-gift-complete").on("click", "button[name='pay']", function (ev) {
   var amount= $("#pay-gift-complete .amount").val();
   var card= $("#pay-gift-complete").data('card');
   if (card) {
-    $.getJSON("<?=GIFT_BACKEND?>/add-txn.php?callback=?",
+    $.getJSON("<?php echo GIFT_BACKEND;?>/add-txn.php?callback=?",
               { card: card, amount: -amount },
               function (data) {
                 if (data.error) {
@@ -1380,4 +1380,4 @@ $("#add-note").on("submit", function(ev) {
 </script>
 </div>
 </div>
-<?foot();
+<?php foot();

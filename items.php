@@ -88,14 +88,16 @@ $('#add-item-form form').on('submit', function(ev) {
 });
 </script>
 <br>
-<?
+<?php
 
 if (!$search) {
   $q= "SELECT id, name, search FROM saved_search ORDER BY name";
-  $r= $db->query($q);
+  $results= $db->query($q);
 
+  var_dump($results);
+if($results){
   echo '<ul class="list-group">';
-  while ($row= $r->fetch_assoc()) {
+  while ($row= $results->fetch_assoc()) {
     echo '<li class="list-group-item">',
          '<a href="items.php?saved=', $row['id'], '" ',
             'title="', ashtml($row['search']), '">',
@@ -103,6 +105,7 @@ if (!$search) {
          '</a></li>';
   }
   echo '</ul>';
+}
 
   goto end;
 }

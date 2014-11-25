@@ -28,7 +28,7 @@ header("content-type: text/html;charset=utf-8");?>
 <!DOCTYPE html>
 <html>
 <head>
- <title><?=ashtml($title)?></title>
+ <title><?php echo ashtml($title);?></title>
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -77,7 +77,7 @@ $(document).ready(function() {
   // Focus the #focus item
   $("#focus").focus();
   // dynamically set active navbar link based on script
-  var page= '<?=basename($_SERVER['SCRIPT_NAME'])?>';
+  var page= '<?php echo basename($_SERVER['SCRIPT_NAME']);?>';
   $("#navbar a[href='./" + page + "']").parent().addClass('active');
 }); 
  </script>
@@ -345,8 +345,8 @@ function dump_query($q) {
   $num+= 1;
   if (!$GLOBALS['DEBUG']) return;
 ?>
-<button onclick="$('#query_<?=$num?>').toggle('drop')" class="btn btn-default">Show Query</button>
-<pre id="query_<?=$num?>" class="debug" style="display: none"><?=ashtml($q)?></pre>
+<button onclick="$('#query_<?php echo $num;?>').toggle('drop')" class="btn btn-default">Show Query</button>
+<pre id="query_<?php echo $num; ?>" class="debug" style="display: none"><?php echo ashtml($q);?></pre>
 <?
 }
 
